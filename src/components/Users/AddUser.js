@@ -1,13 +1,14 @@
 import React from 'react'
 
 import Card from '../IU/Card'
+import classes from './AddUser.module.css'
 
 const AddUser = (props) => {
   const onSubmitHandler = (event) => {
-    event.preventDefaulet()
+    event.preventDefault()
   }
   return (
-    <Card>
+    <Card className={classes.input}>
       <form onSubmit={onSubmitHandler}>
         <label htmlFor='username'>Username</label>
         <input id='username' type='text' />
